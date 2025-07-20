@@ -18,7 +18,7 @@ const app = express();
 const port = process.env.PORT || 3001; 
 
 app.use(cors({
-  origin: 'http://localhost:5173', // <-- Permite solo el frontend React
+  origin: 'https://frontend-denuncias.onrender.com', // <-- Permite solo el frontend React
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // <-- Métodos permitidos
   allowedHeaders: ['Content-Type', 'Authorization'], // <-- Headers permitidos
 }));
