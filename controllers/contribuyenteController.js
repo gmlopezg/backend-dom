@@ -121,7 +121,7 @@ exports.getDenunciasByContribuyenteId = async (req, res) => {
 
     // Esta validación asume que tu middleware 'authContribuyente' adjunta 'req.user.id' y 'req.user.rol'
     // Si tu middleware adjunta 'req.contribuyente.id_contribuyente', ajusta esta línea.
-    if (!req.user || (req.user.id !== contribuyenteId && req.user.rol !== 'Administrador' && req.user.rol !== 'Director')) {
+    if (!req.contribuyente || (req.contribuyente.id !== contribuyenteId && req.contribuyente.rol !== 'administrador' && req.user.rol !== 'director_de_obras')) {
         return res.status(403).json({ message: 'Acceso denegado. No tienes permiso para ver estas denuncias.' });
     }
 

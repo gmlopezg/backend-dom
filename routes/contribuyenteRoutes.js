@@ -12,7 +12,7 @@ router.post('/register', contribuyenteController.registerContribuyente);
 router.post('/login', contribuyenteController.loginContribuyente);
 
 // --- Ruta para obtener denuncias de un contribuyente específico ---
-router.get('/:id/denuncias', authContribuyente, contribuyenteController.getDenunciasByContribuyenteId); // ¡NUEVA RUTA!
+router.get('/:id/denuncias', authContribuyente, contribuyenteController.getDenunciasByContribuyenteId); 
 
 // --- Rutas de ejemplo protegidas para Contribuyentes ---
 router.get('/me', authContribuyente, (req, res) => {
